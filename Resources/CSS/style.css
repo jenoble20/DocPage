@@ -7,8 +7,16 @@ body{
     flex-direction: row-reverse;
 }
 
+
+
+/**MAIN SECTION**/
+
 #main-doc{
-    margin-left: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12rem;
+
 }
 
 h2{
@@ -23,16 +31,19 @@ p{
 ul{
     margin-left: 3rem;
     margin-top: 0.5rem;
-    list-style: circle
+    list-style: circle;
+    width: 80%;
 }
 
 li{
+    line-height: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .main-section{
     padding: 1rem;
     border-bottom: 3px solid #22223B;
+    width: 80%;
 }
 
 .code-container{
@@ -44,7 +55,6 @@ li{
 code{
     font-family: monospace, "sans serif";
     line-height: 1.1rem;
-
 }
 
 
@@ -57,14 +67,14 @@ code{
     top: 0;
     border-right: 1px solid black;
     background-color: #22223B;
-     color: #F7F7F7;
+    color: #F7F7F7;
 }
 
 h1{
     font-size: 2rem;
     text-align: center;
     padding: 0.7rem;
-    border-bottom: 1px solid black;
+    margin-top: 0.25rem;
 }
 
 .nav-link{
@@ -73,10 +83,58 @@ h1{
     padding: 0.7rem 0.7rem 0.7rem 1.5rem;
     text-decoration: none;
     color: #F7F7F7;
-    border-bottom: 1px solid black;
     transition: background-color 0.4s ease;
 }
 
 .nav-link:hover{
     background-color: #119DA4;
+}
+
+#mobile-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0.5rem;
+    color: #F7F7F7;
+    background-color: #22223B;
+    text-align: center;
+    display: none;
+}
+
+
+
+/**MEDIA QUERIES**/
+
+@media only screen and (max-width: 1400px){
+
+    #main-doc{
+        margin-left: 18rem;
+    }
+    .main-section{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    #navbar{
+        display: grid;
+        grid-template-rows: 5rem 3rem 3rem;
+        grid-template-columns: repeat(7, 1fr);
+        width: 100%;
+        z-index: 10;
+    }
+
+    .nav-link{
+        width: 100%;
+        height: 3rem;
+        padding: 0;
+        text-align: center;
+        border: 1px solid #F7F7F7;
+        border-bottom: none;
+    }
+
+    #navbar header{
+        grid-column: 1/8;
+        grid-row: 1/2;
+    }
 }
