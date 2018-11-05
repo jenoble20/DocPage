@@ -1,0 +1,61 @@
+html{
+    font-size: 18px;
+}
+body{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#navbar{
+
+}
+
+h2{
+    font-size: 2rem;
+}
+
+p{
+    padding: 1rem;
+    line-height: 1.2rem;
+}
+
+ul{
+    margin-left: 3rem;
+    list-style: circle
+}
+
+li{
+    margin-bottom: 0.5rem;
+}
+
+.main-section{
+    margin: 1rem;
+    border-bottom: 1px solid black;
+}
+
+code{
+    font-family: monospace;
+    line-height: 1.1rem;
+    background-color: grey;
+}
+
+
+
+/**NAV SECTION**/
+
+.navbar{
+    display: fixed;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.nav-link{
+    display: block;
+    width: 15rem;
+    padding: 0.7rem;
+    background-color: skyblue;
+    border-bottom: 1px solid black;
+}
